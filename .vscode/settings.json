@@ -1,0 +1,62 @@
+{
+  // !Editor settings
+  "cSpell.language": "en,de-de",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": { "source.fixAll": true },
+
+  // !Explorer
+
+  // Enable and configure file nesting
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    // General nestings
+    "README.md": "LICENSE",
+    "Taskfile.yml": ".editorconfig",
+    "package.json": ".gitignore,tsconfig.json",
+    // Next.js nestings
+    "next.config.js": "next-env.d.ts",
+    "*.tsx": "$(capture).*",
+    "*.ts": "$(capture).*"
+  },
+
+  // Exclude useless files from explorer
+  "files.exclude": {
+    // Svelte excludings
+    "**/bun.lockb": true,
+    "**/node_modules": true,
+    // next excludings
+    "**/.next": true
+  },
+
+  //! Language features
+
+  // Typescript
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // ESLint
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "css",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "eslint.probe": [
+    "javascript",
+    "typescript",
+    "css",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "eslint.workingDirectories": ["frontend/server"],
+
+  //! Formatters
+  "[json][jsonc][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript][javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
+}

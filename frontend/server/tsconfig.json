@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // Enable latest features
+    "lib": ["esnext", "DOM", "DOM.Iterable"],
+    "module": "esnext",
+    "target": "esnext",
+
+    // Typescript 5.x specific configuration
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+
+    // Allow default imports for CommonJS modules
+    "esModuleInterop": true,
+
+    // Allow importing .js from .ts
+    "allowJs": true,
+    "checkJs": true,
+
+    // Allow importing .json files
+    "resolveJsonModule": true,
+
+    // Enable best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+
+    // Enable Next/React Features
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "incremental": true,
+
+    // Define path aliases
+    "paths": {
+      "$styles/*": ["./lib/styles/*"],
+      "$*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

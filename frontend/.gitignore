@@ -1,0 +1,6 @@
+# System specific
+.DS_Store
+
+# Dependencies
+node_modules
+
