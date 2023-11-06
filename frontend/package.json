@@ -2,10 +2,7 @@
   "name": "frontend",
   "private": true,
   "license": "MIT",
-  "workspaces": {
-    "packages": [
-      "modules/*",
-      "server"
-    ]
+  "scripts": {
+    "start": "pnpm -r --filter server run"
   }
 }

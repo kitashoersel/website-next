@@ -6,7 +6,7 @@
     "target": "esnext",
 
     // Typescript 5.x specific configuration
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "moduleDetection": "force",
     "noEmit": true,
     "allowImportingTsExtensions": true,

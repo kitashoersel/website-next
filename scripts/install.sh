@@ -1,1 +1,1 @@
-(cd frontend && bun install && cd app && bun run init)
+(cd frontend && pnpm install)

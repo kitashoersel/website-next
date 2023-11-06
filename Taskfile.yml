@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 tasks:
   default:
@@ -14,3 +14,9 @@ tasks:
     desc: Setups the complete dev environment
     cmds:
       - docker compose -f frontend/docker/docker-compose.dev.yml --env-file frontend/app/.env.development -p kita-website-next up -d
+
+  docker-frontend:
+    desc: Builds the frontend docker image
+    cmds:
+      - if [ {{.CLI_ARGS}} = build ]; then docker build -f frontend/docker/Dockerfile -t kitashoersel/website-next frontend; fi
+      - if [ {{.CLI_ARGS}} = run ]; then docker run -p 3000:3000 --name website-next kitashoersel/website-next; fi

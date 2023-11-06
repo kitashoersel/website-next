@@ -13,7 +13,7 @@
     // General nestings
     "README.md": "LICENSE",
     "Taskfile.yml": ".editorconfig",
-    "package.json": ".gitignore,tsconfig.json",
+    "package.json": ".gitignore,tsconfig.json,pnpm-workspace.yaml",
     // Next.js nestings
     "next.config.js": "next-env.d.ts",
     "*.tsx": "$(capture).*",
@@ -23,7 +23,7 @@
   // Exclude useless files from explorer
   "files.exclude": {
     // Svelte excludings
-    "**/bun.lockb": true,
+    "**/pnpm-lock.yaml": true,
     "**/node_modules": true,
     // next excludings
     "**/.next": true
